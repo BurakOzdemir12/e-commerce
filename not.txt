@@ -1,0 +1,20 @@
+ <?php if(isset($_SESSION['user_id'])){ ?>
+<button onclick="window.location.href= 'index.html?logout=<?php echo $user_id; ?>'" onclick="return confirm('Çıkış yapmak istediğinize emin misiniz?');" class="dropdown-item">Çıkış</button>
+<?php } else { ?>
+<button onclick="window.location.href='user_login.php';" class="dropdown-item" type="button">Giriş</button>
+<button onclick="window.location.href='register.php';" class="dropdown-item" type="button">Kayıt Ol</button>
+       <?php } ?>
+
+giriş yaptığında sadece çıkış butonunu gösterme
+
+
+foreach ($cart_query as $fetch_cart) {<?php  } ?> 
+
+
+   $cart_query = mysqli_query($connect, "SELECT * FROM cart WHERE user_id = '$user_id'") or die('query failed');
+                    if(mysqli_num_rows($cart_query) > 0){
+                    while($fetch_cart = mysqli_fetch_assoc($cart_query)){ 
+                        foreach($cart_query as $fetch_cart){
+         $grand_total += $sub_total; } 
+          } 
+                    }
